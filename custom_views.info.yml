@@ -1,0 +1,9 @@
+name: 'Custom Views'
+type: module
+description: 'Created custom handlers, table, VBO etc'
+core: 8.x
+package: Custom
+
+dependencies:
+  - pets_owners
+  - pets_owners_storage
