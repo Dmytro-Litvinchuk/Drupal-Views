@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    -pets_owners_storage
-id: change_gender
-label: 'Change gender'
-plugin: change_gender
-configuration: {  }

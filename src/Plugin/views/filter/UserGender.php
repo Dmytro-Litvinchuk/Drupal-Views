@@ -2,8 +2,6 @@
 
 namespace Drupal\custom_views\Plugin\views\filter;
 
-
-use Drupal\Core\Entity\Query\Sql\Condition;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\views\Plugin\views\filter\FilterPluginBase;
 
@@ -38,16 +36,13 @@ class UserGender extends FilterPluginBase {
     ];
   }
 
-  /**
-  // Work only if you select it from views.
   public function query() {
     $this->ensureMyTable();
-    if ($this->value == 'mr') {
+    if ($this->value[0] == 'mr') {
       $this->query->addWhere($this->options['group'], "$this->tableAlias.$this->realField", $this->value, $this->operator);
-    } elseif ($this->value == 'ms') {
+    } else {
       $this->query->addWhere($this->options['group'], "$this->tableAlias.$this->realField", 'mr', '<>');
     }
   }
-   */
 
 }
